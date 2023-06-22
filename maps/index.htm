@@ -1,0 +1,7540 @@
+<!doctype html>
+<html 
+      lang="zh-CN"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com">
+    <meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award">
+    <meta property="og:site_name" content="Google Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#ffffff"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="/_pwa/developers/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//apis.google.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Material+Icons&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vd7ff44c5bfb37fb3237a957a44096487cf6c040e737614b6a01efed4db62f3c8/developers/css/app.css">
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vd7ff44c5bfb37fb3237a957a44096487cf6c040e737614b6a01efed4db62f3c8/developers/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vd7ff44c5bfb37fb3237a957a44096487cf6c040e737614b6a01efed4db62f3c8/developers/images/touchicon-180.png"><link rel="canonical" href="https://developers.google.com/maps?hl=zh-cn"><link rel="search" type="application/opensearchdescription+xml"
+            title="Google Developers" href="https://developers.google.com/s/opensearch.xml">
+      
+
+<title>Google Maps Platform &nbsp;|&nbsp; Google Developers</title>
+
+<meta property="og:title" content="Google Maps Platform &nbsp;|&nbsp; Google Developers"><meta name="description" content="数以百万计的网站和应用利用 Google Maps Platform 为其用户打造卓越的位置体验。">
+  <meta property="og:description" content="数以百万计的网站和应用利用 Google Maps Platform 为其用户打造卓越的位置体验。"><meta property="og:url" content="https://developers.google.com/maps?hl=zh-cn"><meta property="og:image" content="https://www.gstatic.com/devrel-devsite/prod/vd7ff44c5bfb37fb3237a957a44096487cf6c040e737614b6a01efed4db62f3c8/developers/images/opengraph/white.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675"><meta property="og:locale" content="zh_cn"><meta name="twitter:card" content="summary_large_image">
+    </head>
+  <body class="maps-landing"
+        template="landing"
+        theme="white"
+        type="landing"
+        
+        layout="full"
+        
+        
+        pending>
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+    <section class="devsite-wrapper"><devsite-header>
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner nocontent">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        <div class="devsite-product-name-wrapper">
+
+  
+    
+  
+  <a href="https://developers.google.com/maps">
+    
+  <div class="devsite-product-logo-container"
+       
+       
+       
+    size="medium"
+  >
+  
+    <img class="devsite-product-logo"
+         alt="Google Maps Platform"
+         src="https://developers.google.com/maps/images/maps-icon.svg"
+         srcset=""
+         sizes="64px"
+         loading="lazy">
+  
+  </div>
+  
+  </a>
+  
+
+  
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             devsite-has-google-wordmark">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/maps"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Google Maps Platform"
+      
+    >
+    
+          <h1 class="devsite-product-name"><svg class="devsite-google-wordmark"
+       xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 148 48">
+    <title>Google</title>
+    <path class="devsite-google-wordmark-svg-path" d="M19.58,37.65c-9.87,0-18.17-8.04-18.17-17.91c0-9.87,8.3-17.91,18.17-17.91c5.46,0,9.35,2.14,12.27,4.94l-3.45,3.45c-2.1-1.97-4.93-3.49-8.82-3.49c-7.21,0-12.84,5.81-12.84,13.02c0,7.21,5.64,13.02,12.84,13.02c4.67,0,7.34-1.88,9.04-3.58c1.4-1.4,2.32-3.41,2.66-6.16H19.58v-4.89h16.47c0.18,0.87,0.26,1.92,0.26,3.06c0,3.67-1.01,8.21-4.24,11.44C28.93,35.9,24.91,37.65,19.58,37.65z M61.78,26.12c0,6.64-5.1,11.53-11.36,11.53s-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53S61.78,19.43,61.78,26.12z M56.8,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C53.84,33.11,56.8,30.22,56.8,26.12z M87.25,26.12c0,6.64-5.1,11.53-11.36,11.53c-6.26,0-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53C82.15,14.59,87.25,19.43,87.25,26.12zM82.28,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C79.32,33.11,82.28,30.22,82.28,26.12z M112.09,15.29v20.7c0,8.52-5.02,12.01-10.96,12.01c-5.59,0-8.95-3.76-10.22-6.81l4.41-1.83c0.79,1.88,2.71,4.1,5.81,4.1c3.8,0,6.16-2.36,6.16-6.77v-1.66h-0.18c-1.14,1.4-3.32,2.62-6.07,2.62c-5.76,0-11.05-5.02-11.05-11.49c0-6.51,5.28-11.57,11.05-11.57c2.75,0,4.93,1.22,6.07,2.58h0.18v-1.88H112.09z M107.64,26.16c0-4.06-2.71-7.03-6.16-7.03c-3.49,0-6.42,2.97-6.42,7.03c0,4.02,2.93,6.94,6.42,6.94C104.93,33.11,107.64,30.18,107.64,26.16z M120.97,3.06v33.89h-5.07V3.06H120.97z M140.89,29.92l3.93,2.62c-1.27,1.88-4.32,5.11-9.61,5.11c-6.55,0-11.28-5.07-11.28-11.53c0-6.86,4.77-11.53,10.71-11.53c5.98,0,8.91,4.76,9.87,7.34l0.52,1.31l-15.42,6.38c1.18,2.31,3.01,3.49,5.59,3.49C137.79,33.11,139.58,31.84,140.89,29.92zM128.79,25.77l10.31-4.28c-0.57-1.44-2.27-2.45-4.28-2.45C132.24,19.04,128.66,21.31,128.79,25.77z"/>
+  </svg>Maps Platform</h1>
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+              
+              
+  <devsite-tabs class="upper-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="上面的标签页">
+      
+        
+          <tab  >
+            <a href="https://cloud.google.com/maps-platform/"
+   class="gc-analytics-event "
+   track-type="nav"
+   track-name="概览"
+   track-metadata-eventdetail="https://cloud.google.com/maps-platform/"
+   track-metadata-position="nav - 概览"
+   track-metadata-module="primary nav"
+   
+   
+     data-category="home"
+   
+     data-label="navTopMenu"
+   
+     data-action="tabClick"
+   >
+  概览
+</a>
+
+          </tab>
+        
+      
+        
+          <tab  >
+            <a href="https://cloud.google.com/maps-platform/#products"
+   class="gc-analytics-event "
+   track-type="nav"
+   track-name="产品"
+   track-metadata-eventdetail="https://cloud.google.com/maps-platform/#products"
+   track-metadata-position="nav - 产品"
+   track-metadata-module="primary nav"
+   
+   
+     data-category="products"
+   
+     data-label="navTopMenu"
+   
+     data-action="tabClick"
+   >
+  产品
+</a>
+
+          </tab>
+        
+      
+        
+          <tab  >
+            <a href="https://cloud.google.com/maps-platform/pricing/"
+   class="gc-analytics-event "
+   track-type="nav"
+   track-name="定价"
+   track-metadata-eventdetail="https://cloud.google.com/maps-platform/pricing/"
+   track-metadata-position="nav - 定价"
+   track-metadata-module="primary nav"
+   
+   
+     data-category="pricing"
+   
+     data-label="navTopMenu"
+   
+     data-action="tabClick"
+   >
+  定价
+</a>
+
+          </tab>
+        
+      
+        
+          <tab dropdown
+    dropdown-full
+    
+    
+    >
+  <a href="https://developers.google.com/maps/documentation"
+   class="gc-analytics-event "
+   track-type="nav"
+   track-name="文档"
+   track-metadata-eventdetail="https://developers.google.com/maps/documentation"
+   track-metadata-position="nav - 文档"
+   track-metadata-module="primary nav"
+   
+   
+     data-category="documentation"
+   
+     data-label="navTopMenu"
+   
+     data-action="tabClick"
+   >
+  文档
+</a>
+
+  <a href="#"
+     role="button"
+     aria-haspopup="true"
+     aria-expanded="false"
+     aria-label="Dropdown menu for 文档"
+     track-type="nav"
+     track-name="文档"
+     track-metadata-eventdetail="https://developers.google.com/maps/documentation"
+     track-metadata-position="nav - 文档"
+     track-metadata-module="primary nav"
+     
+       data-category="documentation"
+     
+       data-label="navTopMenu"
+     
+       data-action="tabClick"
+     
+     class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+
+  <div class="devsite-tabs-dropdown" aria-label="submenu" hidden>
+    
+    <div class="devsite-tabs-dropdown-content">
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>开始使用</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/gmp-get-started"
+                     track-type="nav"
+                     track-name="开始使用 google maps platform"
+                     track-metadata-eventdetail="https://developers.google.com/maps/gmp-get-started"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="开始使用"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      开始使用 Google Maps Platform
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/documentation/api-picker"
+                     track-type="nav"
+                     track-name="api 选择器"
+                     track-metadata-eventdetail="https://developers.google.com/maps/documentation/api-picker"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="开始使用"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      API 选择器
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/billing-credits"
+                     track-type="nav"
+                     track-name="结算帐号赠金"
+                     track-metadata-eventdetail="https://developers.google.com/maps/billing-credits"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="开始使用"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      结算帐号赠金
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/billing/gmp-billing"
+                     track-type="nav"
+                     track-name="结算"
+                     track-metadata-eventdetail="https://developers.google.com/maps/billing/gmp-billing"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="开始使用"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      结算
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/reporting/gmp-reporting"
+                     track-type="nav"
+                     track-name="报告"
+                     track-metadata-eventdetail="https://developers.google.com/maps/reporting/gmp-reporting"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="开始使用"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      报告
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/faq"
+                     track-type="nav"
+                     track-name="常见问题解答"
+                     track-metadata-eventdetail="https://developers.google.com/maps/faq"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="开始使用"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      常见问题解答
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/support"
+                     track-type="nav"
+                     track-name="支持和资源"
+                     track-metadata-eventdetail="https://developers.google.com/maps/support"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="开始使用"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      支持和资源
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/gmp-incident-management"
+                     track-type="nav"
+                     track-name="事件管理"
+                     track-metadata-eventdetail="https://developers.google.com/maps/gmp-incident-management"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="开始使用"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      事件管理
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>地图</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/documentation/javascript"
+                     track-type="nav"
+                     track-name="maps javascript api"
+                     track-metadata-eventdetail="https://developers.google.com/maps/documentation/javascript"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="地图"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Maps JavaScript API
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/documentation/android-sdk"
+                     track-type="nav"
+                     track-name="maps sdk for android"
+                     track-metadata-eventdetail="https://developers.google.com/maps/documentation/android-sdk"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="地图"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Maps SDK for Android
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/documentation/ios-sdk"
+                     track-type="nav"
+                     track-name="maps sdk for ios"
+                     track-metadata-eventdetail="https://developers.google.com/maps/documentation/ios-sdk"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="地图"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Maps SDK for iOS
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/documentation/maps-static"
+                     track-type="nav"
+                     track-name="maps static api"
+                     track-metadata-eventdetail="https://developers.google.com/maps/documentation/maps-static"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="地图"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Maps Static API
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/documentation/streetview"
+                     track-type="nav"
+                     track-name="street view static api"
+                     track-metadata-eventdetail="https://developers.google.com/maps/documentation/streetview"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="地图"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Street View Static API
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/documentation/embed"
+                     track-type="nav"
+                     track-name="maps embed api"
+                     track-metadata-eventdetail="https://developers.google.com/maps/documentation/embed"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="地图"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Maps Embed API
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/documentation/urls"
+                     track-type="nav"
+                     track-name="地图网址"
+                     track-metadata-eventdetail="https://developers.google.com/maps/documentation/urls"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="地图"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      地图网址
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/documentation/elevation"
+                     track-type="nav"
+                     track-name="maps elevation api"
+                     track-metadata-eventdetail="https://developers.google.com/maps/documentation/elevation"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="地图"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Maps Elevation API
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>路线</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/documentation/directions"
+                     track-type="nav"
+                     track-name="directions api"
+                     track-metadata-eventdetail="https://developers.google.com/maps/documentation/directions"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="路线"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Directions API
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/documentation/distance-matrix"
+                     track-type="nav"
+                     track-name="distance matrix api"
+                     track-metadata-eventdetail="https://developers.google.com/maps/documentation/distance-matrix"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="路线"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Distance Matrix API
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/documentation/roads"
+                     track-type="nav"
+                     track-name="roads api"
+                     track-metadata-eventdetail="https://developers.google.com/maps/documentation/roads"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="路线"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Roads API
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>解决方案</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/solutions"
+                     track-type="nav"
+                     track-name="行业解决方案"
+                     track-metadata-eventdetail="https://developers.google.com/maps/solutions"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="路线"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      行业解决方案
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/solutions"
+                     track-type="nav"
+                     track-name="零售"
+                     track-metadata-eventdetail="https://developers.google.com/maps/solutions"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="路线"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      零售
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/documentation/gaming"
+                     track-type="nav"
+                     track-name="游戏服务"
+                     track-metadata-eventdetail="https://developers.google.com/maps/documentation/gaming"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="路线"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      游戏服务
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>地点</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/documentation/places/web-service"
+                     track-type="nav"
+                     track-name="places api"
+                     track-metadata-eventdetail="https://developers.google.com/maps/documentation/places/web-service"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="地点"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Places API
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/documentation/places/android-sdk"
+                     track-type="nav"
+                     track-name="places sdk for android"
+                     track-metadata-eventdetail="https://developers.google.com/maps/documentation/places/android-sdk"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="地点"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Places SDK for Android
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/documentation/places/ios-sdk"
+                     track-type="nav"
+                     track-name="places sdk for ios"
+                     track-metadata-eventdetail="https://developers.google.com/maps/documentation/places/ios-sdk"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="地点"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Places SDK for iOS
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/documentation/javascript/places"
+                     track-type="nav"
+                     track-name="places library、maps javascript api"
+                     track-metadata-eventdetail="https://developers.google.com/maps/documentation/javascript/places"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="地点"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Places Library、Maps JavaScript API
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/documentation/geocoding"
+                     track-type="nav"
+                     track-name="geocoding api"
+                     track-metadata-eventdetail="https://developers.google.com/maps/documentation/geocoding"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="地点"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Geocoding API
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/documentation/geolocation"
+                     track-type="nav"
+                     track-name="geolocation api"
+                     track-metadata-eventdetail="https://developers.google.com/maps/documentation/geolocation"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="地点"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Geolocation API
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/documentation/timezone"
+                     track-type="nav"
+                     track-name="time zone api"
+                     track-metadata-eventdetail="https://developers.google.com/maps/documentation/timezone"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="地点"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      Time Zone API
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+        <div class="devsite-tabs-dropdown-column
+                    ">
+          
+            <ul class="devsite-tabs-dropdown-section
+                       ">
+              
+                <li class="devsite-nav-title" role="heading" tooltip>其他资源</li>
+              
+              
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/api-key-best-practices"
+                     track-type="nav"
+                     track-name="api 密钥最佳做法"
+                     track-metadata-eventdetail="https://developers.google.com/maps/api-key-best-practices"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="其他资源"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      API 密钥最佳做法
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/coverage"
+                     track-type="nav"
+                     track-name="地图覆盖范围详情"
+                     track-metadata-eventdetail="https://developers.google.com/maps/coverage"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="其他资源"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      地图覆盖范围详情
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/optimization-guide"
+                     track-type="nav"
+                     track-name="优化指南"
+                     track-metadata-eventdetail="https://developers.google.com/maps/optimization-guide"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="其他资源"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      优化指南
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/deprecations"
+                     track-type="nav"
+                     track-name="弃用"
+                     track-metadata-eventdetail="https://developers.google.com/maps/deprecations"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="其他资源"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      弃用
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/asset-tracking-plan"
+                     track-type="nav"
+                     track-name="资产跟踪计划"
+                     track-metadata-eventdetail="https://developers.google.com/maps/asset-tracking-plan"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="其他资源"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      资产跟踪计划
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/root-ca-faq"
+                     track-type="nav"
+                     track-name="根 ca 迁移常见问题解答"
+                     track-metadata-eventdetail="https://developers.google.com/maps/root-ca-faq"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="其他资源"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      根 CA 迁移常见问题解答
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/billing/public-programs"
+                     track-type="nav"
+                     track-name="公共项目"
+                     track-metadata-eventdetail="https://developers.google.com/maps/billing/public-programs"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="其他资源"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      公共项目
+                    </div>
+                    
+                  </a>
+                </li>
+              
+                <li class="devsite-nav-item">
+                  <a href="https://developers.google.com/maps/premium"
+                     track-type="nav"
+                     track-name="高级计划"
+                     track-metadata-eventdetail="https://developers.google.com/maps/premium"
+                     track-metadata-position="nav - 文档"
+                     track-metadata-module="tertiary nav"
+                     
+                       track-metadata-module_headline="其他资源"
+                     
+                     tooltip
+                  >
+                    
+                    <div class="devsite-nav-item-title">
+                      高级计划
+                    </div>
+                    
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+</tab>
+        
+      
+        
+          <tab  >
+            <a href="https://cloud.google.com/blog/products/maps-platform"
+   class="gc-analytics-event "
+   track-type="nav"
+   track-name="博客"
+   track-metadata-eventdetail="https://cloud.google.com/blog/products/maps-platform"
+   track-metadata-position="nav - 博客"
+   track-metadata-module="primary nav"
+   
+   
+     data-category="blog"
+   
+     data-label="navTopMenu"
+   
+     data-action="tabClick"
+   >
+  博客
+</a>
+
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+            
+           </div>
+          
+<devsite-search
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    project-name="Google Maps Platform"
+    tenant-name="Google Developers"
+    project-scope="/maps"
+    url-scoped="https://developers.google.com/s/results/maps"
+    
+    
+    
+    role="combobox">
+  <form class="devsite-search-form" action="https://developers.google.com/s/results" method="GET">
+    <div class="devsite-search-container">
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="搜索"
+          aria-haspopup="false"
+          aria-multiline="false"
+          aria-label="搜索框"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="搜索"
+          role="searchbox"
+          type="text"
+          value=""
+          >
+        <div class="devsite-search-image material-icons" aria-hidden="true"></div>
+      </div>
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="打开搜索框"></button>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="关闭搜索框"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+        
+
+        
+<devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    
+    <select aria-label="选择您的语言偏好设置。"
+            class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+    
+      
+      <option>Language</option>
+    
+    
+      <option value="en"
+              lang="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+    
+      <option value="id"
+              lang="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+    
+      <option value="de"
+              lang="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+    
+      <option value="es"
+              lang="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+    
+      <option value="es_419"
+              lang="es_419"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es_419"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español – América Latina
+      </option>
+    
+      <option value="fr"
+              lang="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+    
+      <option value="pt_br"
+              lang="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+    
+      <option value="ru"
+              lang="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+    
+      <option value="zh_cn"
+              lang="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+    
+      <option value="zh_tw"
+              lang="zh_tw"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_tw"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 繁體
+      </option>
+    
+      <option value="ja"
+              lang="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+    
+      <option value="ko"
+              lang="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+    
+    </select>
+  </devsite-select>
+</devsite-language-selector>
+
+
+        
+
+        
+          
+          
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                          
+                            fp-auth
+                          
+                        id="devsite-user"></devsite-user>
+           
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    
+      devsite-header-no-lower-tabs
+    ">
+    <div class="devsite-header-background">
+      
+        
+          <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+              
+                
+              
+              
+                
+  <div class="devsite-product-description">数以百万计的网站和应用利用 Google Maps Platform 为其用户打造卓越的位置体验。</div>
+  
+              
+            </div>
+            
+              <div class="devsite-product-button-row">
+  
+
+  
+  <a href="https://cloud.google.com/contact-maps"
+  
+    
+      class="button
+             
+             "
+    
+    
+      
+        data-label="congtact-sales"
+      
+        class="gc-analytics-event"
+      
+        data-action="linkClick"
+      
+        data-category="GMPDevLandingPage"
+      
+    
+    >与销售人员联系</a>
+
+  
+  <a href="https://developers.google.com/maps/gmp-get-started"
+  
+    class="button button-primary
+      "
+    
+    
+      
+        data-action="linkClick"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-label="get-started"
+      
+    
+    >开始使用</a>
+
+</div>
+            
+          </div>
+          
+        
+      
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+</devsite-header>
+      <devsite-book-nav scrollbars hidden>
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="devsite-book-nav devsite-nav nocontent"
+     aria-label="侧边菜单">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  
+    
+  
+  <a href="https://developers.google.com/maps">
+    
+  <div class="devsite-product-logo-container"
+       
+       
+       
+    size="medium"
+  >
+  
+    <img class="devsite-product-logo"
+         alt="Google Maps Platform"
+         src="https://developers.google.com/maps/images/maps-icon.svg"
+         srcset=""
+         sizes="64px"
+         loading="lazy">
+  
+  </div>
+  
+  </a>
+  
+
+  
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             devsite-has-google-wordmark">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/maps"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Google Maps Platform"
+      
+    >
+    
+          <h1 class="devsite-product-name"><svg class="devsite-google-wordmark"
+       xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 148 48">
+    <title>Google</title>
+    <path class="devsite-google-wordmark-svg-path" d="M19.58,37.65c-9.87,0-18.17-8.04-18.17-17.91c0-9.87,8.3-17.91,18.17-17.91c5.46,0,9.35,2.14,12.27,4.94l-3.45,3.45c-2.1-1.97-4.93-3.49-8.82-3.49c-7.21,0-12.84,5.81-12.84,13.02c0,7.21,5.64,13.02,12.84,13.02c4.67,0,7.34-1.88,9.04-3.58c1.4-1.4,2.32-3.41,2.66-6.16H19.58v-4.89h16.47c0.18,0.87,0.26,1.92,0.26,3.06c0,3.67-1.01,8.21-4.24,11.44C28.93,35.9,24.91,37.65,19.58,37.65z M61.78,26.12c0,6.64-5.1,11.53-11.36,11.53s-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53S61.78,19.43,61.78,26.12z M56.8,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C53.84,33.11,56.8,30.22,56.8,26.12z M87.25,26.12c0,6.64-5.1,11.53-11.36,11.53c-6.26,0-11.36-4.89-11.36-11.53c0-6.68,5.1-11.53,11.36-11.53C82.15,14.59,87.25,19.43,87.25,26.12zM82.28,26.12c0-4.15-2.96-6.99-6.39-6.99c-3.43,0-6.39,2.84-6.39,6.99c0,4.11,2.96,6.99,6.39,6.99C79.32,33.11,82.28,30.22,82.28,26.12z M112.09,15.29v20.7c0,8.52-5.02,12.01-10.96,12.01c-5.59,0-8.95-3.76-10.22-6.81l4.41-1.83c0.79,1.88,2.71,4.1,5.81,4.1c3.8,0,6.16-2.36,6.16-6.77v-1.66h-0.18c-1.14,1.4-3.32,2.62-6.07,2.62c-5.76,0-11.05-5.02-11.05-11.49c0-6.51,5.28-11.57,11.05-11.57c2.75,0,4.93,1.22,6.07,2.58h0.18v-1.88H112.09z M107.64,26.16c0-4.06-2.71-7.03-6.16-7.03c-3.49,0-6.42,2.97-6.42,7.03c0,4.02,2.93,6.94,6.42,6.94C104.93,33.11,107.64,30.18,107.64,26.16z M120.97,3.06v33.89h-5.07V3.06H120.97z M140.89,29.92l3.93,2.62c-1.27,1.88-4.32,5.11-9.61,5.11c-6.55,0-11.28-5.07-11.28-11.53c0-6.86,4.77-11.53,10.71-11.53c5.98,0,8.91,4.76,9.87,7.34l0.52,1.31l-15.42,6.38c1.18,2.31,3.01,3.49,5.59,3.49C137.79,33.11,139.58,31.84,140.89,29.92zM128.79,25.77l10.31-4.28c-0.57-1.44-2.27-2.45-4.28-2.45C132.24,19.04,128.66,21.31,128.79,25.77z"/>
+  </svg>Maps Platform</h1>
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="https://cloud.google.com/maps-platform/"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 概览"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="概览">
+  
+    <span class="devsite-nav-text" tooltip >
+      概览
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="https://cloud.google.com/maps-platform/#products"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 产品"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="产品">
+  
+    <span class="devsite-nav-text" tooltip >
+      产品
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="https://cloud.google.com/maps-platform/pricing/"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 定价"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="定价">
+  
+    <span class="devsite-nav-text" tooltip >
+      定价
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/maps/documentation"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 文档"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="文档">
+  
+    <span class="devsite-nav-text" tooltip >
+      文档
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
+               ">
+      
+<li class="devsite-nav-item">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip menu="文档">
+      More
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          menu="文档">
+    </span>
+    
+  
+  </span>
+  
+
+</li>
+
+    </ul>
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="https://cloud.google.com/blog/products/maps-platform"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 博客"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="博客">
+  
+    <span class="devsite-nav-text" tooltip >
+      博客
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom" role="navigation">
+        
+        
+          
+    
+  
+    
+  
+    
+  
+    
+      
+      <ul class="devsite-nav-list" menu="文档"
+          aria-label="侧边菜单" hidden>
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      开始使用
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/gmp-get-started"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 开始使用 Google Maps Platform"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="开始使用GoogleMapsPlatform">
+  
+    <span class="devsite-nav-text" tooltip >
+      开始使用 Google Maps Platform
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/documentation/api-picker"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: API 选择器"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="api选择器">
+  
+    <span class="devsite-nav-text" tooltip >
+      API 选择器
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/billing-credits"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 结算帐号赠金"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="结算帐号赠金">
+  
+    <span class="devsite-nav-text" tooltip >
+      结算帐号赠金
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/billing/gmp-billing"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 结算"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="结算">
+  
+    <span class="devsite-nav-text" tooltip >
+      结算
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/reporting/gmp-reporting"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 报告"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="报告">
+  
+    <span class="devsite-nav-text" tooltip >
+      报告
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/faq"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 常见问题解答"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="常见问题解答">
+  
+    <span class="devsite-nav-text" tooltip >
+      常见问题解答
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/support"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 支持和资源"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="支持和资源">
+  
+    <span class="devsite-nav-text" tooltip >
+      支持和资源
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/gmp-incident-management"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 事件管理"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="事件管理">
+  
+    <span class="devsite-nav-text" tooltip >
+      事件管理
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      地图
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/documentation/javascript"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Maps JavaScript API"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="mapsJavascriptApi">
+  
+    <span class="devsite-nav-text" tooltip >
+      Maps JavaScript API
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/documentation/android-sdk"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Maps SDK for Android"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="mapsSdkForAndroid">
+  
+    <span class="devsite-nav-text" tooltip >
+      Maps SDK for Android
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/documentation/ios-sdk"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Maps SDK for iOS"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="mapsSdkForIos">
+  
+    <span class="devsite-nav-text" tooltip >
+      Maps SDK for iOS
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/documentation/maps-static"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Maps Static API"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="mapsStaticApi">
+  
+    <span class="devsite-nav-text" tooltip >
+      Maps Static API
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/documentation/streetview"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Street View Static API"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="streetViewStaticApi">
+  
+    <span class="devsite-nav-text" tooltip >
+      Street View Static API
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/documentation/embed"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Maps Embed API"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="mapsEmbedApi">
+  
+    <span class="devsite-nav-text" tooltip >
+      Maps Embed API
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/documentation/urls"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 地图网址"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="地图网址">
+  
+    <span class="devsite-nav-text" tooltip >
+      地图网址
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/documentation/elevation"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Maps Elevation API"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="mapsElevationApi">
+  
+    <span class="devsite-nav-text" tooltip >
+      Maps Elevation API
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      路线
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/documentation/directions"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Directions API"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="directionsApi">
+  
+    <span class="devsite-nav-text" tooltip >
+      Directions API
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/documentation/distance-matrix"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Distance Matrix API"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="distanceMatrixApi">
+  
+    <span class="devsite-nav-text" tooltip >
+      Distance Matrix API
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/documentation/roads"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Roads API"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="roadsApi">
+  
+    <span class="devsite-nav-text" tooltip >
+      Roads API
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      解决方案
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/solutions"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 行业解决方案"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="行业解决方案">
+  
+    <span class="devsite-nav-text" tooltip >
+      行业解决方案
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/solutions"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 零售"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="零售">
+  
+    <span class="devsite-nav-text" tooltip >
+      零售
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/documentation/gaming"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 游戏服务"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="游戏服务">
+  
+    <span class="devsite-nav-text" tooltip >
+      游戏服务
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      地点
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/documentation/places/web-service"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Places API"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="placesApi">
+  
+    <span class="devsite-nav-text" tooltip >
+      Places API
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/documentation/places/android-sdk"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Places SDK for Android"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="placesSdkForAndroid">
+  
+    <span class="devsite-nav-text" tooltip >
+      Places SDK for Android
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/documentation/places/ios-sdk"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Places SDK for iOS"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="placesSdkForIos">
+  
+    <span class="devsite-nav-text" tooltip >
+      Places SDK for iOS
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/documentation/javascript/places"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Places Library、Maps JavaScript API"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="placesLibrary、mapsJavascriptApi">
+  
+    <span class="devsite-nav-text" tooltip >
+      Places Library、Maps JavaScript API
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/documentation/geocoding"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Geocoding API"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="geocodingApi">
+  
+    <span class="devsite-nav-text" tooltip >
+      Geocoding API
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/documentation/geolocation"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Geolocation API"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="geolocationApi">
+  
+    <span class="devsite-nav-text" tooltip >
+      Geolocation API
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/documentation/timezone"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Time Zone API"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="timeZoneApi">
+  
+    <span class="devsite-nav-text" tooltip >
+      Time Zone API
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+          
+            
+              
+<li class="devsite-nav-item devsite-nav-heading">
+
+  
+  <span
+    
+       class="devsite-nav-title"
+       tooltip
+    
+    >
+  
+    <span class="devsite-nav-text" tooltip >
+      其他资源
+   </span>
+    
+  
+  </span>
+  
+
+</li>
+
+            
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/api-key-best-practices"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: API 密钥最佳做法"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="api密钥最佳做法">
+  
+    <span class="devsite-nav-text" tooltip >
+      API 密钥最佳做法
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/coverage"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 地图覆盖范围详情"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="地图覆盖范围详情">
+  
+    <span class="devsite-nav-text" tooltip >
+      地图覆盖范围详情
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/optimization-guide"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 优化指南"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="优化指南">
+  
+    <span class="devsite-nav-text" tooltip >
+      优化指南
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/deprecations"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 弃用"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="弃用">
+  
+    <span class="devsite-nav-text" tooltip >
+      弃用
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/asset-tracking-plan"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 资产跟踪计划"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="资产跟踪计划">
+  
+    <span class="devsite-nav-text" tooltip >
+      资产跟踪计划
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/root-ca-faq"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 根 CA 迁移常见问题解答"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="根Ca迁移常见问题解答">
+  
+    <span class="devsite-nav-text" tooltip >
+      根 CA 迁移常见问题解答
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/billing/public-programs"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 公共项目"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="公共项目">
+  
+    <span class="devsite-nav-text" tooltip >
+      公共项目
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+              
+<li class="devsite-nav-item">
+
+  
+  <a href="/maps/premium"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: 高级计划"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="高级计划">
+  
+    <span class="devsite-nav-text" tooltip >
+      高级计划
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+            
+          
+        
+      </ul>
+    
+  
+    
+  
+        
+        
+      </div>
+    
+  </div>
+</nav>
+        
+      </devsite-book-nav>
+      <section id="gc-wrapper">
+        <main role="main" class="devsite-main-content"
+            
+            >
+          
+          <div class="devsite-sidebar">
+            <div class="sidebar-content">
+              <devsite-toc class="devsite-nav"
+                           role="navigation"
+                           aria-label="目录"
+                           scrollbars
+                disabled></devsite-toc>
+            </div>
+          </div>
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article"><style>
+      /* Styles inlined from /maps/styles/maps-landing.css */
+/* Background */
+.maps-landing [background=grey] {
+    background-color: #fbfbfb;
+}
+
+/* Hide header description for this landing page */
+.maps-landing .devsite-product-id-row {
+  justify-content: flex-end;
+}
+
+.maps-landing .devsite-product-description-row {
+  visibility: hidden;
+  display: none;
+}
+
+/* Row Padding & Margins */
+
+.maps-landing .maps-landing-row-pad-top-default {
+  padding-top: 80px !important;;
+  padding-bottom: unset;
+}
+
+.maps-landing .maps-landing-row-pad-top-med {
+  padding-top: 72px !important;;
+  padding-bottom: unset;
+}
+
+.maps-landing .maps-landing-row-pad-top-small {
+  padding-top: 42px !important;
+  padding-bottom: unset;
+}
+
+@media only screen and (max-width: 840px) {
+  .maps-landing .maps-landing-row-pad-top-default {
+    padding-top: 40px !important;;
+  }
+
+  .maps-landing .maps-landing-row-pad-top-med {
+    padding-top: 36px !important;;
+  }
+}
+
+.maps-landing .maps-landing-row-pad-bottom-default {
+  padding-bottom: 80px !important;;
+}
+
+.maps-landing .maps-landing-row-pad-bottom-small {
+  padding-bottom: 42px !important;;
+}
+
+@media only screen and (max-width: 840px) {
+  .maps-landing .maps-landing-row-pad-bottom-default {
+    padding-bottom: 40px !important;;
+  }
+}
+
+.maps-landing .devsite-landing-row-group,
+.maps-landing .devsite-landing-row-html,
+.maps-landing .devsite-landing-row-header {
+  max-width: 1488px;
+}
+
+/* End Row Padding */
+
+/* Typography */
+
+.maps-landing h1,
+.maps-landing h2,
+.maps-landing h3 {
+  color: #202124;
+  margin-bottom: 14px;
+  margin-top: 0;
+}
+
+.maps-landing .devsite-landing-row h1 {
+  font-size: 44px;
+  line-height: 52px;
+}
+
+.maps-landing .devsite-landing-row h2 {
+  font-size: 28px;
+  line-height: 36px;
+}
+
+.maps-landing .devsite-landing-row h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.maps-landing .devsite-landing-row p {
+  font-weight: normal;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #5f6368;
+}
+
+.maps-landing .description-subtitle-text p {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.no-link {
+  text-decoration: none;
+  color: #5f6368;
+}
+
+/* End Typography */
+
+/* Hero */
+
+.maps-landing .maps-landing-hero {
+  background-image: url('/maps/images/landing/maps-hero.png');
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: contain;
+}
+
+.maps-landing .maps-landing-hero .devsite-landing-row-item-description {
+  max-width: 406px;
+}
+
+/* End Hero */
+
+/* Code Picker */
+
+.maps-landing .maps-landing-code-picker h2 {
+  margin-bottom: 32px !important;
+}
+
+/* End Code Picker */
+
+/* Tab Section */
+
+.maps-landing .maps-landing-card-tabs devsite-selector,
+.maps-landing .maps-landing-card-tabs devsite-tabs {
+  border: none;
+}
+
+devsite-selector devsite-tabs tab a {
+  font-size: 20px;
+}
+
+devsite-selector>section {
+  padding: 0 !important;
+}
+
+.maps-landing .landing-row-cards .landing-row-item h3 {
+  margin-bottom: 0 !important;
+}
+
+.maps-landing .maps-landing-card-tabs .landing-row-cards {
+  display: flex;
+  justify-content: center;
+  margin: 35px 0 0 0 !important;
+  grid-gap: 24px;
+  grid-template-columns: repeat(4,1fr);
+}
+
+.maps-landing .maps-landing-card-tabs .landing-row-item {
+  max-width: 342px;
+}
+
+@media only screen and (max-width: 840px) {
+  .maps-landing .maps-landing-card-tabs .landing-row-cards {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .maps-landing .maps-landing-card-tabs .landing-row-item {
+    max-width: unset;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .maps-landing .maps-landing-card-tabs .landing-row-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.maps-landing .maps-landing-card-tabs .landing-row-item {
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  flex: 1 0;
+  min-width: 0;
+}
+
+.maps-landing .maps-landing-card-tabs .landing-row-item img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+.maps-landing .maps-landing-card-tabs .landing-row-item .landing-row-item-description {
+  padding: 16px;
+}
+
+.maps-landing .maps-landing-card-tabs .devsite-tabs-wrapper {
+  justify-content: center;
+}
+
+/* End Tab Section */
+
+/* Basic Card Sections */
+
+.maps-landing .maps-landing-card-row figure {
+  background: none;
+  height: 48px;
+  align-items: center;
+  display: flex;
+  margin: 16px 0 0 16px;
+}
+
+.maps-landing .maps-landing-card-row img {
+  width: 48px;
+}
+
+.maps-landing .maps-landing-card-row .devsite-landing-row-item,
+.maps-landing .maps-landing-api-cols .devsite-landing-row-item,
+.maps-landing .maps-landing-card-tabs .landing-row-item {
+  border: none;
+  box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px rgba(60, 64, 67, 0.15);
+}
+
+.maps-landing .maps-landing-card-row {
+  max-width: 1575px;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+
+/* End Basic Card Sections */
+
+/* Search Section */
+.maps-landing .maps-landing-docs-search {
+  text-align: center;
+}
+
+.maps-landing .maps-landing-docs-search form {
+  max-width: 660px;
+  margin: 25px auto 0;
+  position: relative;
+}
+
+.maps-landing .maps-landing-docs-search .material-icons {
+  color: #5f6368;
+  left: 8px;
+  position: absolute;
+  top: 6px;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+.maps-landing .maps-landing-docs-search input {
+  width: 100%;
+  padding: 8px 8px 8px 40px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(60, 64, 67, 0.15), 0 1px 3px rgba(60, 64, 67, 0.3), 0 6px 11px rgba(128, 134, 139, 0.06), 0 -3px 11px rgba(128, 134, 139, 0.09);
+}
+
+.maps-landing .maps-landing-docs-search .devsite-search-image:before {
+  content: 'search';
+}
+
+/* End Search Section */
+
+/* API Cards Section */
+
+.maps-landing .maps-landing-api-cols .devsite-landing-row-group {
+  grid-gap: 48px 24px;
+}
+
+.maps-landing .maps-landing-api-cols .devsite-landing-row-item h3 {
+  margin-bottom: 0 !important;
+}
+
+/* Title for first card of each column */
+.maps-landing .maps-landing-api-cols .devsite-landing-row-column .devsite-landing-row-item:first-of-type h3 {
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.maps-landing .maps-landing-api-cols p {
+  margin: 10px 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .maps-landing .maps-landing-api-cols p {
+    min-height: 48px;
+  }
+}
+
+/* h3 of first column  – blue */
+.maps-landing .maps-landing-api-cols .devsite-landing-row-column:first-of-type h3 {
+  color: #1a73e8;
+}
+
+/* buttons of first column  – blue */
+.maps-landing .maps-landing-api-cols .devsite-landing-row-column:first-of-type .button {
+  border: 1px solid #1a73e8;
+}
+
+/* h3 of second column  – yellow */
+.maps-landing .maps-landing-api-cols .devsite-landing-row-column:nth-of-type(2) h3 {
+  color: #f9ab00;
+}
+
+/* buttons of second column  – yellow */
+.maps-landing .maps-landing-api-cols .devsite-landing-row-column:nth-of-type(2) .button {
+  border: 1px solid #f9ab00;
+}
+
+/* button hover of second column  – yellow */
+.maps-landing .maps-landing-api-cols .devsite-landing-row-column:nth-of-type(2) .button:hover {
+  background: #f9ab0026;
+}
+
+/* h3 of third column  – purple */
+.maps-landing .maps-landing-api-cols .devsite-landing-row-column:nth-of-type(3) h3 {
+  color: #9334e6;
+}
+
+/* buttons of third column  – purple */
+.maps-landing .maps-landing-api-cols .devsite-landing-row-column:nth-of-type(3) .button {
+  border: 1px solid #9334e6;
+}
+
+/* button hover of third column  – purple */
+.maps-landing .maps-landing-api-cols .devsite-landing-row-column:nth-of-type(3) .button:hover {
+  background: #9334e621;
+}
+
+.maps-landing .maps-landing-api-cols .devsite-landing-row-column > .devsite-landing-row-item:nth-of-type(n+2) {
+  margin: 18px 0 0;
+}
+
+.maps-landing .maps-landing-api-cols .devsite-landing-row-item-buttons {
+  padding-top: 10px;
+}
+
+.maps-landing .maps-landing-api-cols .button,
+.maps-landing .maps-landing-card-row .button{
+  border-radius: 11.5px;
+  height: 24px;
+  color: #9aa0a6;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 3px 12px 4px 12px;
+}
+
+/* End API Cards Section */
+
+/* Marquee Sections */
+
+.maps-landing .devsite-landing-row-marquee {
+  padding: 80px 0 !important;
+}
+
+.maps-landing .devsite-landing-row-marquee .devsite-landing-row-item-description-content {
+  margin-bottom: 20px;
+}
+
+.maps-landing .maps-landing-get-started .devsite-landing-row-item-media {
+  grid-column: 2/span 4;
+  display: flex;
+  justify-content: center;
+}
+
+.maps-landing .maps-landing-get-started .devsite-landing-row-item-description {
+  grid-column: 8/span 4;
+}
+
+/* End Marquee Sections */
+
+      </style>
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation">
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="面包屑导航">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developers.google.com/"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        首页
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developers.google.com/products"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+        产品
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developers.google.com/maps"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail="Google Maps Platform"
+      
+    >
+    
+        Google Maps Platform
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+    
+  </div>
+  
+    <devsite-feedback
+  position="header"
+  project-name="Google Maps Platform"
+  product-id="81777"
+  bucket=""
+  context="Maps API Product Family"
+  version="t-devsite-webserver-20210809-r02-rc00.437250104648096395"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="header"
+  
+  
+  
+    
+      project-icon="https://developers.google.com/maps/images/maps-icon.svg"
+    
+  
+  
+  feedback-type="thumb-rating">
+
+  <button>
+  
+    
+    发送反馈
+  
+  </button>
+</devsite-feedback>
+  
+  
+  <devsite-bookmark></devsite-bookmark>
+  <devsite-toc class="devsite-nav" devsite-toc-embedded
+               disabled>
+  </devsite-toc>
+
+  
+
+  <div class="devsite-article-body clearfix
+    devsite-no-page-title">
+
+    
+      
+  <section class="devsite-landing-row devsite-landing-row-1-up devsite-landing-row-50 devsite-landing-row-marquee maps-landing-hero"
+           
+    background="grey"
+  
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="meta-contenttexthtml-charsetutf-8-http-equivcontent-type-h1-idbuild-awesome-apps-with-googles-knowledge-of-the-real-world-data-textbuild-awesome-apps-with-googles-knowledge-of-the-real-world-google-h1"
+        data-text="运用 Google 对现实世界的认识和了解，构建优质应用"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+  <a href="https://developers.google.com/maps/gmp-get-started">
+    
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><h1 id="build-awesome-apps-with-google’s-knowledge-of-the-real-world" data-text="Build awesome apps with Google’s knowledge of the real world">运用 Google 对现实世界的认识和了解，构建优质应用</h1>
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>借助 Google Maps Platform 的最新地图、路线和地点功能，打造身临其境般的实时体验。这些功能由 Google 团队精心打造，面向世界各地的开发者提供。</p>
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.com/maps/gmp-get-started"
+  
+    class="button button-primary
+      "
+    
+    
+      
+        data-category="GMPDevLandingPage"
+      
+        data-label="get-started"
+      
+        data-action="linkClick"
+      
+        class="gc-analytics-event"
+      
+    
+    >开始使用</a>
+
+  
+  <a href="https://developers.google.com/maps/documentation"
+  
+    class="button
+      "
+    
+    
+      
+        data-label="docs"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="linkClick"
+      
+        class="gc-analytics-event"
+      
+    
+    >阅读文档</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-4-up maps-landing-card-tabs maps-landing-row-pad-top-small"
+           
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      <div class="devsite-landing-row-html">
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><devsite-selector>
+  <section>
+    <h3 id="top-topics" data-text="Top topics">热门主题</h3>
+    <section class="landing-row-cards">
+      <div class="landing-row-item">
+        <div class="landing-row-item-media">
+          <figure class="landing-row-item-image">
+            <img alt="由 WebGL 的提供支持的地图功能 - JavaScript" src="/maps/images/landing/webgl.png"/>
+          </figure>
+        </div>
+        <div class="landing-row-item-description">
+          <div class="landing-row-item-body">
+            <h3 data-text="title" class="hide-from-toc" id="webgl-powered-map-features---javascript">
+            <a href="/maps/documentation/javascript/webgl" class="gc-analytics-event" data-category="GMPDevLandingPage" data-action="linkClick: top-topics" data-label="webgl">由 WebGL 的提供支持的地图功能 - JavaScript</a></h3>
+            <p>利用 WebGL 的强大功能为网络打造全新的地图体验。</p>
+          </div>
+        </div>
+      </div>
+      <div class="landing-row-item">
+        <div class="landing-row-item-media">
+          <figure class="landing-row-item-image">
+            <img alt="Google Maps Platform Codelab" src="/maps/images/landing/codelabs.png"/>
+          </figure>
+        </div>
+        <div class="landing-row-item-description">
+          <div class="landing-row-item-body">
+            <h3 data-text="title" class="hide-from-toc" id="google-maps-platform-codelabs">
+              <a href="https://codelabs.developers.google.com/?cat=mapsplatform" class="gc-analytics-event" data-category="GMPDevLandingPage" data-action="linkClick: top-topics" data-label="codelabs">Google Maps Platform Codelab</a></h3>
+            <p>通过端到端的 Codelab 动手练习教程学习如何通过 Google Maps Platform 的产品和功能构建应用。</p>
+          </div>
+        </div>
+      </div>
+      <div class="landing-row-item">
+        <div class="landing-row-item-media">
+          <figure class="landing-row-item-image">
+            <img alt="获取报告：利用位置智能信息挖掘价值" src="/maps/images/landing/bcg.png"/>
+          </figure>
+        </div>
+        <div class="landing-row-item-description">
+          <div class="landing-row-item-body">
+            <h3 data-text="title" class="hide-from-toc" id="get-the-report:-unlocking-value-with-location-intelligence">
+              <a href="https://mapsplatform.withgoogle.com/location-intelligence-report/home.html?utm_source=whitepaper&amp;utm_medium=devpage&amp;utm_campaign=FY21-Q1-global-demandgen-website-wd-GMP_BCG_Research&amp;utm_content=bcg" class="gc-analytics-event" data-category="GMPDevLandingPage" data-action="linkClick: top-topics" data-label="report">获取报告：利用位置智能信息挖掘价值</a></h3>
+            <p>通过来自 Boston Consulting Group 的新数据分析，了解五个行业的领导者如何利用地理空间数据。</p>
+          </div>
+        </div>
+      </div>
+      <div class="landing-row-item">
+        <div class="landing-row-item-media">
+          <figure class="landing-row-item-image">
+            <img alt="使用标记聚类 - JavaScript" src="/maps/images/landing/marker_cluster.jpg"/>
+          </figure>
+        </div>
+        <div class="landing-row-item-description">
+          <div class="landing-row-item-body">
+            <h3 data-text="title" class="hide-from-toc" id="using-marker-clustering---javascript">
+              <a href="/maps/documentation/javascript/marker-clustering" class="gc-analytics-event" data-category="GMPDevLandingPage" data-action="linkClick: top-topics" data-label="clustering">使用标记聚类 - JavaScript</a></h3>
+            <p>使用标记聚类改善地图的用户体验。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <section>
+    <h3 id="whats-new" data-text="What's new">新变化</h3>
+    <section class="landing-row-cards">
+      <div class="landing-row-item">
+        <div class="landing-row-item-media">
+          <figure class="landing-row-item-image">
+            <img alt="WebGL 叠加视图（Beta 版）- JavaScript" src="/maps/images/landing/webgloverlayview.png"/>
+          </figure>
+        </div>
+        <div class="landing-row-item-description">
+          <div class="landing-row-item-body">
+            <h3 data-text="title" class="hide-from-toc" id="webgl-overlay-view-beta---javascript">
+              <a href="/maps/documentation/javascript/webgl/webgl-overlay-view" class="gc-analytics-event" data-category="GMPDevLandingPage" data-action="linkClick: whats-new" data-label="webgl">WebGL 叠加视图（Beta 版）- JavaScript</a></h3>
+            <p>使用 Maps JavaScript API 直接在矢量基本地图上渲染 2D 和 3D 对象。</p>
+          </div>
+        </div>
+      </div>
+      <div class="landing-row-item">
+        <div class="landing-row-item-media">
+          <figure class="landing-row-item-image">
+            <img alt="倾斜和旋转（Beta 版）- JavaScript" src="/maps/images/landing/tilt_rotation.png"/>
+          </figure>
+        </div>
+        <div class="landing-row-item-description">
+          <div class="landing-row-item-body">
+            <h3 data-text="title" class="hide-from-toc" id="tilt-and-rotation-beta---javascript">
+              <a href="/maps/documentation/javascript/webgl/tilt-rotation" class="gc-analytics-event" data-category="GMPDevLandingPage" data-action="linkClick: whats-new" data-label="tilt-rotation">倾斜和旋转（Beta 版）- JavaScript</a></h3>
+            <p>通过手动和编程方式在三个维度上倾斜和旋转矢量基本地图。</p>
+          </div>
+        </div>
+      </div>
+      <div class="landing-row-item">
+        <div class="landing-row-item-media">
+          <figure class="landing-row-item-image">
+            <img alt="集成相机控件 - JavaScript" src="/maps/images/landing/camera_controls.png"/>
+          </figure>
+        </div>
+        <div class="landing-row-item-description">
+          <div class="landing-row-item-body">
+            <h3 data-text="title" class="hide-from-toc" id="integrated-camera-controls---javascript">
+              <a href="http://goo.gle/map-move-camera" class="gc-analytics-event" data-category="GMPDevLandingPage" data-action="linkClick: whats-new" data-label="camera">
+             集成式相机控件 - JavaScript</a></h3>
+            <p>同时更改地图的倾斜度、方向、缩放和中心属性，以创建流畅的相机动画。</p>
+          </div>
+        </div>
+      </div>
+      <div class="landing-row-item">
+        <div class="landing-row-item-media">
+          <figure class="landing-row-item-image">
+            <img alt="云端地图样式设置 - 网页" src="/maps/images/landing/styling.jpg"/>
+          </figure>
+        </div>
+        <div class="landing-row-item-description">
+          <div class="landing-row-item-body">
+            <h3 data-text="title" class="hide-from-toc" id="cloud-based-maps-styling---web">
+              <a href="http://goo.gle/maps-platform-io21-announcements" class="gc-analytics-event" data-category="GMPDevLandingPage" data-action="linkClick: whats-new" data-label="styling">云端地图样式设置 - 网页</a></h3>
+            <p>深度定制地图的外观、风格和行为。Maps JavaScript API 和 Maps Static API 现已正式推出。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <section>
+    <h3 id="tutorials" data-text="Tutorials">教程</h3>
+    <section class="landing-row-cards">
+      <div class="landing-row-item">
+        <div class="landing-row-item-media">
+          <figure class="landing-row-item-image">
+            <img alt="Codelab：打造采用 WebGL 加速技术的地图体验 - JavaScript" src="/maps/images/landing/webgl_codelab.png"/>
+          </figure>
+        </div>
+        <div class="landing-row-item-description">
+          <div class="landing-row-item-body">
+            <h3 data-text="title" class="hide-from-toc" id="codelab:-building-webgl-accelerated-map-experiences---javascript">
+              <a href="/codelabs/maps-platform/webgl" class="gc-analytics-event" data-category="GMPDevLandingPage" data-action="linkClick: tutorials" data-label="webgl">Codelab：打造采用 WebGL 加速技术的地图体验 - JavaScript</a></h3>
+            <p>学习如何在地图上渲染 3D 对象，以及如何通过倾斜和旋转以及 WebGL 叠加视图以 3D 模式呈现相机移动动画。</p>
+          </div>
+        </div>
+      </div>
+      <div class="landing-row-item">
+        <div class="landing-row-item-media">
+          <figure class="landing-row-item-image">
+            <img alt="Codelab：使用 SwiftUI 将地图添加到您的移动应用 - iOS" src="/maps/images/landing/swift_codelab.png"/>
+          </figure>
+        </div>
+        <div class="landing-row-item-description">
+          <div class="landing-row-item-body">
+            <h3 data-text="title" class="hide-from-toc" id="codelab:-add-a-map-to-your-mobile-app-with-swiftui---ios">
+              <a href="/codelabs/maps-platform/maps-platform-ios-swiftui" class="gc-analytics-event" data-category="GMPDevLandingPage" data-action="linkClick: tutorials" data-label="swiftui">Codelab：使用 SwiftUI 将地图添加到您的移动应用</a> - iOS</h3>
+            <p>了解如何使用 SwiftUI 将 Maps SDK for iOS 集成到您的移动应用中。</p>
+          </div>
+        </div>
+      </div>
+      <div class="landing-row-item">
+        <div class="landing-row-item-media">
+          <figure class="landing-row-item-image">
+            <img alt="Codelab：将地图添加到您的 Android 应用 (Kotlin)" src="/maps/images/landing/android_codelab.png"/>
+          </figure>
+        </div>
+        <div class="landing-row-item-description">
+          <div class="landing-row-item-body">
+            <h3 data-text="title" class="hide-from-toc" id="codelab:-add-a-map-to-your-android-app---kotlin">
+              <a href="/codelabs/maps-platform/maps-platform-101-android" class="gc-analytics-event" data-category="GMPDevLandingPage" data-action="linkClick: tutorials" data-label="kotlin">
+            Codelab：将地图添加到您的 Android 应用 - Kotlin</a></h3>
+            <p>了解使用 Maps SDK for Android 的基础知识。</p>
+          </div>
+        </div>
+      </div>
+      <div class="landing-row-item">
+        <div class="landing-row-item-media">
+          <figure class="landing-row-item-image">
+            <img alt="Deck.gl codelab" src="/maps/images/landing/deck.jpg"/>
+          </figure>
+        </div>
+        <div class="landing-row-item-description">
+          <div class="landing-row-item-body">
+            <h3 data-text="title" class="hide-from-toc" id="codelab:-data-visualization-with-deck.gl---javascript">
+              <a href="https://codelabs.developers.google.com/codelabs/maps-deck-gl" class="gc-analytics-event" data-category="GMPDevLandingPage" data-action="linkClick: tutorials" data-label="deckgl">
+            Codelab：利用 deck.gl 直观呈现数据 - JavaScript</a></h3>
+            <p>利用 deck.gl 和 Maps JS API 大规模直观呈现地理空间数据。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+</devsite-selector>
+
+      </div>
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-1-up maps-landing-row-pad-top-med maps-landing-docs-search"
+           
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      <div class="devsite-landing-row-html">
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><h2 id="read-the-docs" data-text="Read the docs">阅读文档</h2> <form action="/s/results/maps">
+  <div class="devsite-search-image material-icons" aria-hidden="true" translate="no">
+  </div><input type="text" name="q" placeholder="搜索文档"/>
+</form>
+
+      </div>
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-3-up devsite-landing-row-cards maps-landing-api-cols maps-landing-row-pad-top-default"
+           
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      
+
+      
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-column">
+            
+            
+            
+              <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-image">
+  
+    
+  
+  <img alt=""
+       src="https://developers.google.com/maps/images/landing/maps-api.png"
+       srcset="https://developers.google.com/maps/images/landing/maps-api_36.png 36w,https://developers.google.com/maps/images/landing/maps-api_48.png 48w,https://developers.google.com/maps/images/landing/maps-api_72.png 72w,https://developers.google.com/maps/images/landing/maps-api_96.png 96w,https://developers.google.com/maps/images/landing/maps-api_480.png 480w,https://developers.google.com/maps/images/landing/maps-api_720.png 720w,https://developers.google.com/maps/images/landing/maps-api_856.png 856w,https://developers.google.com/maps/images/landing/maps-api_960.png 960w,https://developers.google.com/maps/images/landing/maps-api_1440.png 1440w,https://developers.google.com/maps/images/landing/maps-api_1920.png 1920w,https://developers.google.com/maps/images/landing/maps-api_2880.png 2880w"
+       
+         sizes="(max-width: 840px) 50vw, 464px"
+         loading="lazy"
+       >
+  
+  
+</figure>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id=""
+        data-text="地图"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        地图
+      
+  
+    </h3>
+  
+
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+            
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="maps-sdk"
+        data-text="Maps SDK"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        Maps SDK
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>通过静态和动态地图（Web 版和移动版）为您的用户呈现真实世界。</p>
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.com/maps/documentation/javascript"
+  
+    class="button
+      "
+    
+    
+      
+        data-action="linkClick"
+      
+        class="gc-analytics-event"
+      
+        data-label="docs-js-api"
+      
+        data-category="GMPDevLandingPage"
+      
+    
+    >JS</a>
+
+  
+  <a href="https://developers.google.com/maps/documentation/android-sdk"
+  
+    class="button
+      "
+    
+    
+      
+        data-label="docs-android-sdk"
+      
+        data-action="linkClick"
+      
+        data-category="GMPDevLandingPage"
+      
+        class="gc-analytics-event"
+      
+    
+    >Android</a>
+
+  
+  <a href="https://developers.google.com/maps/documentation/ios-sdk"
+  
+    class="button
+      "
+    
+    
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-label="docs-ios-sdk"
+      
+        data-action="linkClick"
+      
+    
+    >iOS</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+            
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id=""
+        data-text="嵌入式地图"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        嵌入式地图
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>通过简单的 HTTP 请求为您的网站添加互动式地图。</p>
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.com/maps/documentation/embed"
+  
+    class="button
+      "
+    
+    
+      
+        data-category="GMPDevLandingPage"
+      
+        class="gc-analytics-event"
+      
+        data-action="linkClick"
+      
+        data-label="docs-embed-api"
+      
+    
+    >API</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+            
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id=""
+        data-text="街景图像"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        街景图像
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>为您的应用添加 360° 街景图像。</p>
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.com/maps/documentation/javascript/streetview"
+  
+    class="button
+      "
+    
+    
+      
+        data-category="GMPDevLandingPage"
+      
+        class="gc-analytics-event"
+      
+        data-action="linkClick"
+      
+        data-label="docs-js-streetview"
+      
+    
+    >JS</a>
+
+  
+  <a href="https://developers.google.com/maps/documentation/streetview"
+  
+    class="button
+      "
+    
+    
+      
+        data-category="GMPDevLandingPage"
+      
+        class="gc-analytics-event"
+      
+        data-label="docs-api-streetview"
+      
+        data-action="linkClick"
+      
+    
+    >API</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+            
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id=""
+        data-text="海拔"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        海拔
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>获取一个或一系列地点的高度。</p>
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.com/maps/documentation/javascript/elevation"
+  
+    class="button
+      "
+    
+    
+      
+        data-action="linkClick"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-label="docs-js-elevation"
+      
+        class="gc-analytics-event"
+      
+    
+    >JS</a>
+
+  
+  <a href="https://developers.google.com/maps/documentation/elevation"
+  
+    class="button
+      "
+    
+    
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="linkClick"
+      
+        data-label="docs-api-elevation"
+      
+        class="gc-analytics-event"
+      
+    
+    >API</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+            
+          </div>
+        
+          <div class="devsite-landing-row-column">
+            
+            
+            
+              <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-image">
+  
+    
+  
+  <img alt=""
+       src="https://developers.google.com/maps/images/landing/routes-api.png"
+       srcset="https://developers.google.com/maps/images/landing/routes-api_36.png 36w,https://developers.google.com/maps/images/landing/routes-api_48.png 48w,https://developers.google.com/maps/images/landing/routes-api_72.png 72w,https://developers.google.com/maps/images/landing/routes-api_96.png 96w,https://developers.google.com/maps/images/landing/routes-api_480.png 480w,https://developers.google.com/maps/images/landing/routes-api_720.png 720w,https://developers.google.com/maps/images/landing/routes-api_856.png 856w,https://developers.google.com/maps/images/landing/routes-api_960.png 960w,https://developers.google.com/maps/images/landing/routes-api_1440.png 1440w,https://developers.google.com/maps/images/landing/routes-api_1920.png 1920w,https://developers.google.com/maps/images/landing/routes-api_2880.png 2880w"
+       
+         sizes="(max-width: 840px) 50vw, 464px"
+         loading="lazy"
+       >
+  
+  
+</figure>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id=""
+        data-text="路线"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        路线
+      
+  
+    </h3>
+  
+
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+            
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id=""
+        data-text="路线"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        路线
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>针对多种交通方式提供路线，包括实时路况信息。</p>
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.com/maps/documentation/javascript/directions"
+  
+    class="button
+      "
+    
+    
+      
+        data-category="GMPDevLandingPage"
+      
+        class="gc-analytics-event"
+      
+        data-label="docs-js-directions"
+      
+        data-action="linkClick"
+      
+    
+    >JS</a>
+
+  
+  <a href="https://developers.google.com/maps/documentation/directions"
+  
+    class="button
+      "
+    
+    
+      
+        class="gc-analytics-event"
+      
+        data-label="docs-api-directions"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="linkClick"
+      
+    
+    >API</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+            
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id=""
+        data-text="距离矩阵"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        距离矩阵
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>计算多个出发地和目的地之间的行程用时和距离。</p>
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.com/maps/documentation/javascript/distancematrix"
+  
+    class="button
+      "
+    
+    
+      
+        data-action="linkClick"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-label="docs-js-distance-matrix"
+      
+    
+    >JS</a>
+
+  
+  <a href="https://developers.google.com/maps/documentation/distance-matrix"
+  
+    class="button
+      "
+    
+    
+      
+        class="gc-analytics-event"
+      
+        data-label="docs-api-distance-matrix"
+      
+        data-action="linkClick"
+      
+        data-category="GMPDevLandingPage"
+      
+    
+    >API</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+            
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id=""
+        data-text="道路"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        道路
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>使用坐标标识附近的道路。</p>
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.com/maps/documentation/roads"
+  
+    class="button
+      "
+    
+    
+      
+        data-category="GMPDevLandingPage"
+      
+        data-label="docs-api-roads"
+      
+        class="gc-analytics-event"
+      
+        data-action="linkClick"
+      
+    
+    >API</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+            
+          </div>
+        
+          <div class="devsite-landing-row-column">
+            
+            
+            
+              <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-image">
+  
+    
+  
+  <img alt=""
+       src="https://developers.google.com/maps/images/landing/places-api.png"
+       srcset="https://developers.google.com/maps/images/landing/places-api_36.png 36w,https://developers.google.com/maps/images/landing/places-api_48.png 48w,https://developers.google.com/maps/images/landing/places-api_72.png 72w,https://developers.google.com/maps/images/landing/places-api_96.png 96w,https://developers.google.com/maps/images/landing/places-api_480.png 480w,https://developers.google.com/maps/images/landing/places-api_720.png 720w,https://developers.google.com/maps/images/landing/places-api_856.png 856w,https://developers.google.com/maps/images/landing/places-api_960.png 960w,https://developers.google.com/maps/images/landing/places-api_1440.png 1440w,https://developers.google.com/maps/images/landing/places-api_1920.png 1920w,https://developers.google.com/maps/images/landing/places-api_2880.png 2880w"
+       
+         sizes="(max-width: 840px) 50vw, 464px"
+         loading="lazy"
+       >
+  
+  
+</figure>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id=""
+        data-text="地点"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        地点
+      
+  
+    </h3>
+  
+
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+            
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="places-api-sdk"
+        data-text="Places API 和 SDK"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        Places API 和 SDK
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>将 Google 的地点详情、搜索和自动补全功能集成到您的应用中。</p>
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.com/maps/documentation/javascript/places"
+  
+    class="button
+      "
+    
+    
+      
+        class="gc-analytics-event"
+      
+        data-action="linkClick"
+      
+        data-label="docs-js-places"
+      
+        data-category="GMPDevLandingPage"
+      
+    
+    >JS</a>
+
+  
+  <a href="https://developers.google.com/maps/documentation/places/android-sdk"
+  
+    class="button
+      "
+    
+    
+      
+        data-label="docs-android-places"
+      
+        data-action="linkClick"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+    
+    >Android</a>
+
+  
+  <a href="https://developers.google.com/maps/documentation/places/ios-sdk"
+  
+    class="button
+      "
+    
+    
+      
+        data-label="docs-ios-places"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="linkClick"
+      
+    
+    >iOS</a>
+
+  
+  <a href="https://developers.google.com/maps/documentation/places/web-service"
+  
+    class="button
+      "
+    
+    
+      
+        data-action="linkClick"
+      
+        data-label="docs-api-places"
+      
+        data-category="GMPDevLandingPage"
+      
+        class="gc-analytics-event"
+      
+    
+    >API</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+            
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id=""
+        data-text="地理编码"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        地理编码
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>将坐标转换为地址以及将地址转换为坐标。</p>
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.com/maps/documentation/javascript/geocoding"
+  
+    class="button
+      "
+    
+    
+      
+        data-label="docs-js-geocoding"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="linkClick"
+      
+    
+    >JS</a>
+
+  
+  <a href="https://developers.google.com/maps/documentation/geocoding"
+  
+    class="button
+      "
+    
+    
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="linkClick"
+      
+        data-label="docs-api-geocoding"
+      
+        class="gc-analytics-event"
+      
+    
+    >API</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+            
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id=""
+        data-text="地理定位"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        地理定位
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>利用附近的手机基站和 Wi-Fi 节点获取设备的大致位置。</p>
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.com/maps/documentation/geolocation"
+  
+    class="button
+      "
+    
+    
+      
+        data-action="linkClick"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-label="docs-api-geolocation"
+      
+    
+    >API</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+            
+              <div class="devsite-landing-row-item devsite-landing-row-item-no-media"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id=""
+        data-text="时区"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+    
+        时区
+      
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>确定一组坐标的时区。</p>
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.com/maps/documentation/timezone"
+  
+    class="button
+      "
+    
+    
+      
+        data-category="GMPDevLandingPage"
+      
+        data-label="docs-api-timezones"
+      
+        class="gc-analytics-event"
+      
+        data-action="linkClick"
+      
+    
+    >API</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+            
+          </div>
+        
+        </div>
+
+      
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-1-up maps-landing-code-picker maps-landing-row-pad-top-default maps-landing-row-pad-bottom-default"
+           
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      <div class="devsite-landing-row-html">
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><h2 id="add-major-features.-write-minimal-code." data-text="Add major features. Write minimal code.">只需编写少量代码，即可添加主要功能。</h2>
+<div class="code-picker-wrapper">
+    <devsite-iframe><iframe src="/maps/index_6d0a508dc87b1adc0a4c32d8c9c46579a2897baf6f4be0e4f75a77523c06a2c5.frame" class="framebox inherit-locale " allowfullscreen is-upgraded></iframe></devsite-iframe>
+ </div>
+
+      </div>
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-4-up devsite-landing-row-cards maps-landing-card-row maps-landing-row-pad-top-small maps-landing-row-pad-bottom-small description-subtitle-text"
+           
+    background="grey"
+  
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      
+      <header class="devsite-landing-row-header"
+              >
+
+        
+
+        
+        <div class="devsite-landing-row-header-text">
+
+          
+    <h2 id=""
+        data-text="加入我们的开发者社区"
+        
+        tabindex="0">
+      
+    
+        加入我们的开发者社区
+      
+  
+    </h2>
+  
+
+          
+        </div>
+        
+
+        
+      </header>
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-image">
+  
+  <a href="https://twitter.com/GMapsPlatform"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="linkClick"
+      
+        data-label="twitter"
+      
+    >
+    
+  
+  <img alt=""
+       src="https://developers.google.com/maps/images/landing/twitter.svg"
+       srcset=""
+       
+         sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px"
+         loading="lazy"
+       >
+  
+  </a>
+  
+</figure>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="twitter"
+        data-text="Twitter"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+  <a href="https://twitter.com/GMapsPlatform"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="linkClick"
+      
+        data-label="twitter"
+      
+    >
+    
+        Twitter
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>及时获取 Google Maps Platform 团队提供的最新资讯和提示。</p>
+
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-image">
+  
+  <a href="https://github.com/googlemaps/"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="linkClick"
+      
+        data-label="github"
+      
+    >
+    
+  
+  <img alt=""
+       src="https://developers.google.com/site-assets/logo-github.svg"
+       srcset=""
+       
+         sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px"
+         loading="lazy"
+       >
+  
+  </a>
+  
+</figure>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="github"
+        data-text="GitHub"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+  <a href="https://github.com/googlemaps/"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="linkClick"
+      
+        data-label="github"
+      
+    >
+    
+        GitHub
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>查看我们的开源实用程序和示例应用，以便您更好、更快速地构建应用。</p>
+
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-image">
+  
+  <a href="https://www.youtube.com/googlemapsplatform"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="linkClick"
+      
+        data-label="youtube"
+      
+    >
+    
+  
+  <img alt=""
+       src="https://developers.google.com/site-assets/logo-youtube.svg"
+       srcset=""
+       
+         sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px"
+         loading="lazy"
+       >
+  
+  </a>
+  
+</figure>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="youtube"
+        data-text="YouTube"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+  <a href="https://www.youtube.com/googlemapsplatform"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="linkClick"
+      
+        data-label="youtube"
+      
+    >
+    
+        YouTube
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>各种教程、提示、公告、开发者故事等，应有尽有。</p>
+
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-image">
+  
+  <a href="https://cloud.google.com/blog/products/maps-platform"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="linkClick"
+      
+        data-label="blog"
+      
+    >
+    
+  
+  <img alt=""
+       src="https://developers.google.com/maps/images/landing/blog.svg"
+       srcset=""
+       
+         sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px"
+         loading="lazy"
+       >
+  
+  </a>
+  
+</figure>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id=""
+        data-text="博客"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+  <a href="https://cloud.google.com/blog/products/maps-platform"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="linkClick"
+      
+        data-label="blog"
+      
+    >
+    
+        博客
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>Google Maps Platform 社区的所有最新深度资讯和故事尽汇于此。</p>
+
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-4-up devsite-landing-row-cards maps-landing-card-row maps-landing-row-pad-top-default description-subtitle-text"
+           
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      
+      <header class="devsite-landing-row-header"
+              >
+
+        
+
+        
+        <div class="devsite-landing-row-header-text">
+
+          
+    <h2 id=""
+        data-text="观看以下视频"
+        
+        tabindex="0">
+      
+    
+        观看以下视频
+      
+  
+    </h2>
+  
+
+          
+        </div>
+        
+
+        
+          <div class="devsite-landing-row-header-buttons">
+  
+
+  
+  <a href="https://www.youtube.com/googlemapsplatform"
+  
+    class="button
+      "
+    
+    
+      
+        data-label="youtube-subscribe"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="linkClick"
+      
+    
+    >订阅我们的 YouTube 频道</a>
+
+</div>
+        
+      </header>
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <devsite-youtube
+  autohide="1"
+  showinfo="0"
+  video-id="qMtE2xooVcA"
+  
+></devsite-youtube>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="io-2021-web"
+        data-text="I/O 2021 - 新一代 Web 版地图"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+  <a href="https://www.youtube.com/watch?v=qMtE2xooVcA"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="videoView"
+      
+        data-label="next-gen-maps"
+      
+    >
+    
+        I/O 2021 - 新一代 Web 版地图
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>工程主管 Travis McPhail 深入探讨了由 WebGL 提供支持的全新地图功能。</p>
+
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <devsite-youtube
+  autohide="1"
+  showinfo="0"
+  video-id="KezCWzzM-zk"
+  
+></devsite-youtube>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="io-2021-"
+        data-text="I/O 2021 - 通过云端地图样式设置功能设计、管理和部署更出色的地图"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+  <a href="https://www.youtube.com/watch?v=KezCWzzM-zk"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="videoView"
+      
+        data-label="cloud-styling"
+      
+    >
+    
+        I/O 2021 - 通过云端地图样式设置功能设计、管理和部署更出色的地图
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>地图团队的 Alicia Sullivan 和 Thame Sookpranee 介绍了有关云端地图样式设置功能的所有须知信息。</p>
+
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <devsite-youtube
+  autohide="1"
+  showinfo="0"
+  video-id="LwpQjmECf5M"
+  
+></devsite-youtube>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="io-2021-google-maps-platform-kotlin"
+        data-text="I/O 2021 - 将 Google Maps Platform 和惯用的 Kotlin 代码结合使用"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+  <a href="https://www.youtube.com/watch?v=LwpQjmECf5M"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="videoView"
+      
+        data-label="kotlin"
+      
+    >
+    
+        I/O 2021 - 将 Google Maps Platform 和惯用的 Kotlin 代码结合使用
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>来自开发者关系团队的 Chris Arriola 将指导您如何通过 Maps SDK for Android 在您的应用中利用惯用的 Kotlin。</p>
+
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <devsite-youtube
+  autohide="1"
+  showinfo="0"
+  video-id="VOP8cvCLGac"
+  
+></devsite-youtube>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="-"
+        data-text="快速提示 - 降低地点自动补全成本"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+  <a href="https://www.youtube.com/watch?v=VOP8cvCLGac"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="videoView"
+      
+        data-label="reduce-autocomplete-costs"
+      
+    >
+    
+        快速提示 - 降低地点自动补全成本
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>了解如何使用字段掩码来降低地点自动补全服务的成本。</p>
+
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-4-up devsite-landing-row-cards maps-landing-card-row maps-landing-row-pad-top-default maps-landing-row-pad-bottom-default description-subtitle-text"
+           
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <devsite-youtube
+  autohide="1"
+  showinfo="0"
+  video-id="n1UorU1PALk"
+  
+></devsite-youtube>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="google-maps-platform-api-sdk"
+        data-text="如何启用 Google Maps Platform API 和 SDK"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+  <a href="https://www.youtube.com/watch?v=n1UorU1PALk"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="videoView"
+      
+        data-label="enable-gmp"
+      
+    >
+    
+        如何启用 Google Maps Platform API 和 SDK
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>了解如何在 Google Cloud Console 中启用 Google Maps Platform API 和 SDK。这些 API 和 SDK 适用于各个 Web 平台和移动平台上的地图、路线和地点功能。</p>
+
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <devsite-youtube
+  autohide="1"
+  showinfo="0"
+  video-id="_cLiUJol8ak"
+  
+></devsite-youtube>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="maps-javascript-api-promise"
+        data-text="Maps JavaScript API 中的 promise 支持"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+  <a href="https://www.youtube.com/watch?v=_cLiUJol8ak"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="videoView"
+      
+        data-label="promises"
+      
+    >
+    
+        Maps JavaScript API 中的 promise 支持
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>Google Maps Platform 已发布适用于 Maps JavaScript API 中 Promise 的 Beta 版！了解如何开始使用 Promise。</p>
+
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <devsite-youtube
+  autohide="1"
+  showinfo="0"
+  video-id="kA679ERgBV4"
+  
+></devsite-youtube>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="google-maps-platform"
+        data-text="Google Maps Platform 简介"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+  <a href="https://www.youtube.com/watch?v=kA679ERgBV4"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="videoView"
+      
+        data-label="gmp-intro"
+      
+    >
+    
+        Google Maps Platform 简介
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>在本视频中，Angela Yu 概述了 Google Maps Platform API 和 SDK 提供的功能，并分享了使用这些功能所需的一些代码示例。</p>
+
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <devsite-youtube
+  autohide="1"
+  showinfo="0"
+  video-id="LjIEoVkI06g"
+  
+></devsite-youtube>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="-maps-js-api-typescript"
+        data-text="快速提示 - 针对 Maps JS API 的 TypeScript 支持"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+  <a href="https://www.youtube.com/watch?v=LjIEoVkI06g"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="videoView"
+      
+        data-label="typescript"
+      
+    >
+    
+        快速提示 - 针对 Maps JS API 的 TypeScript 支持
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>了解 Google Maps JavaScript API 的 TypeScript 扩展支持，包括直接通过 API 源代码生成输入内容。</p>
+
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-4-up devsite-landing-row-cards maps-landing-card-row maps-landing-row-pad-top-small maps-landing-row-pad-bottom-small description-subtitle-text"
+           
+    background="grey"
+  
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      
+      <header class="devsite-landing-row-header"
+              >
+
+        
+
+        
+        <div class="devsite-landing-row-header-text">
+
+          
+    <h2 id=""
+        data-text="获取帮助和支持"
+        
+        tabindex="0">
+      
+    
+        获取帮助和支持
+      
+  
+    </h2>
+  
+
+          
+        </div>
+        
+
+        
+      </header>
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-image">
+  
+  <a href="https://stackoverflow.com/questions/tagged/google-maps"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="linkClick"
+      
+        data-label="stack-overflow"
+      
+    >
+    
+  
+  <img alt=""
+       src="https://developers.google.com/site-assets/logo-stack-overflow.svg"
+       srcset=""
+       
+         sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px"
+         loading="lazy"
+       >
+  
+  </a>
+  
+</figure>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="stack-overflow"
+        data-text="Stack Overflow"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+  <a href="https://stackoverflow.com/questions/tagged/google-maps"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="linkClick"
+      
+        data-label="stack-overflow"
+      
+    >
+    
+        Stack Overflow
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>获取帮助。提供帮助。构建地图 karma。</p>
+
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-image">
+  
+  <a href="https://developers.google.com/maps/support#issue_tracker"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="linkClick"
+      
+        data-label="issue-tracker"
+      
+    >
+    
+  
+  <img alt=""
+       src="https://developers.google.com/maps/images/landing/buganizer.svg"
+       srcset=""
+       
+         sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px"
+         loading="lazy"
+       >
+  
+  </a>
+  
+</figure>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id=""
+        data-text="问题跟踪器"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+  <a href="https://developers.google.com/maps/support#issue_tracker"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="linkClick"
+      
+        data-label="issue-tracker"
+      
+    >
+    
+        问题跟踪器
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>报告错误或提交功能请求。</p>
+
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-image">
+  
+  <a href="https://status.cloud.google.com/maps-platform/"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="linkClick"
+      
+        data-label="platform-status"
+      
+    >
+    
+  
+  <img alt=""
+       src="https://developers.google.com/maps/images/landing/warning.svg"
+       srcset=""
+       
+         sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px"
+         loading="lazy"
+       >
+  
+  </a>
+  
+</figure>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id=""
+        data-text="平台状态"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+  <a href="https://status.cloud.google.com/maps-platform/"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="linkClick"
+      
+        data-label="platform-status"
+      
+    >
+    
+        平台状态
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>了解平台出现的突发事件和服务中断。</p>
+
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            ">
+  
+    <figure class="devsite-landing-row-item-image">
+  
+  <a href="https://developers.google.com/maps/support"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="linkClick"
+      
+        data-label="support"
+      
+    >
+    
+  
+  <img alt=""
+       src="https://developers.google.com/maps/images/landing/help.svg"
+       srcset=""
+       
+         sizes="(max-width: 600px) 50vw, (max-width: 840px) 25vw, 342px"
+         loading="lazy"
+       >
+  
+  </a>
+  
+</figure>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id=""
+        data-text="支持"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+  <a href="https://developers.google.com/maps/support"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+        data-action="linkClick"
+      
+        data-label="support"
+      
+    >
+    
+        支持
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>向 Google Maps Platform 团队寻求帮助。</p>
+
+          </div>
+        
+
+        
+
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+  <section class="devsite-landing-row devsite-landing-row-1-up devsite-landing-row-marquee maps-landing-get-started"
+           
+           
+           
+    header-position="top"
+  >
+    <div class="devsite-landing-row-inner">
+
+    
+      
+
+      
+
+        <div class="devsite-landing-row-group">
+        
+          <div class="devsite-landing-row-item"
+     
+     
+     
+    description-position="bottom"
+  >
+
+  
+
+    
+<div class="devsite-landing-row-item-media
+            
+    devsite-landing-row-item-media-left
+  ">
+  
+    <figure class="devsite-landing-row-item-image">
+  
+  <a href="https://developers.google.com/maps/gmp-get-started">
+    
+  
+  <img alt=""
+       src="https://developers.google.com/maps/images/landing/maps-get-started.png"
+       srcset="https://developers.google.com/maps/images/landing/maps-get-started_36.png 36w,https://developers.google.com/maps/images/landing/maps-get-started_48.png 48w,https://developers.google.com/maps/images/landing/maps-get-started_72.png 72w,https://developers.google.com/maps/images/landing/maps-get-started_96.png 96w,https://developers.google.com/maps/images/landing/maps-get-started_480.png 480w,https://developers.google.com/maps/images/landing/maps-get-started_720.png 720w,https://developers.google.com/maps/images/landing/maps-get-started_856.png 856w,https://developers.google.com/maps/images/landing/maps-get-started_960.png 960w,https://developers.google.com/maps/images/landing/maps-get-started_1440.png 1440w,https://developers.google.com/maps/images/landing/maps-get-started_1920.png 1920w,https://developers.google.com/maps/images/landing/maps-get-started_2880.png 2880w"
+       
+         sizes="(max-width: 840px) 100vw, 952px"
+         loading="lazy"
+       >
+  
+  </a>
+  
+</figure>
+  
+</div>
+
+
+    
+    <div class="devsite-landing-row-item-description"
+         >
+
+      
+
+      <div class="devsite-landing-row-item-body">
+        
+
+        
+    <h3 id="meta-contenttexthtml-charsetutf-8-http-equivcontent-type-h2-idlets-get-started-data-textlets-get-startedh2"
+        data-text="让我们开始吧"
+        class="hide-from-toc no-link"
+        tabindex="0">
+      
+  <a href="https://developers.google.com/maps/gmp-get-started">
+    
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><h2 id="let’s-get-started" data-text="Let’s get started">让我们开始吧</h2>
+      
+  </a>
+  
+    </h3>
+  
+
+        
+          <div class="devsite-landing-row-item-description-content">
+            <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><p>上手使用 Google Maps Platform 既快捷又轻松。</p> <p>创建结算帐号。启用所需的功能。获取 API 密钥。开始构建。</p> <p>如需了解详情，欢迎参阅我们的入门文档和观看相关视频。</p>
+
+          </div>
+        
+
+        
+
+        
+          <div class="devsite-landing-row-item-buttons">
+  
+
+  
+  <a href="https://developers.google.com/maps/gmp-get-started"
+  
+    class="button button-primary
+      "
+    
+    
+      
+        data-action="linkClick"
+      
+        data-label="docs"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+    
+    >文档</a>
+
+  
+  <a href="https://www.youtube.com/playlist?list=PL2rFahu9sLJ0yio9sC7BclL4a9r76ygHi"
+  
+    class="button
+      "
+    
+    
+      
+        data-action="linkClick"
+      
+        data-label="videos"
+      
+        class="gc-analytics-event"
+      
+        data-category="GMPDevLandingPage"
+      
+    
+    >视频演示</a>
+
+</div>
+        
+      </div>
+    </div>
+    
+  
+
+</div>
+        
+        </div>
+      
+
+    
+    </div>
+  </section>
+
+    
+
+    
+  </div>
+
+  
+
+  
+
+  
+  
+</article>
+
+
+
+
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+
+<nav class="devsite-footer-promos nocontent" aria-label="促销活动">
+  <ul class="devsite-footer-promos-list">
+    
+    <li class="devsite-footer-promo">
+      <a href="http://stackoverflow.com/questions/tagged/google-maps"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+       
+         
+         data-label="Footer Promo Link (index 1)"
+       
+       >
+        
+        
+        <img class="devsite-footer-promo-icon"
+             src="/site-assets/logo-stack-overflow.svg"
+             loading="lazy"
+             alt="Stack Overflow">
+        
+        Stack Overflow
+      </a>
+      <div class="devsite-footer-promo-description">在 google-maps 标签下提问。</div>
+    </li>
+    
+    <li class="devsite-footer-promo">
+      <a href="https://github.com/googlemaps/"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+       
+         
+         data-label="Footer Promo Link (index 2)"
+       
+       >
+        
+        
+        <img class="devsite-footer-promo-icon"
+             src="/site-assets/logo-github.svg"
+             loading="lazy"
+             alt="GitHub">
+        
+        GitHub
+      </a>
+      <div class="devsite-footer-promo-description">观摩我们的示例并自己动手练习。</div>
+    </li>
+    
+    <li class="devsite-footer-promo">
+      <a href="https://cloud.google.com/blog/products/maps-platform"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+       
+         
+         data-label="Footer Promo Link (index 3)"
+       
+       >
+        
+        
+        <img class="devsite-footer-promo-icon"
+             src="/maps/images/lhimages/api/icon_placesapi.svg"
+             loading="lazy"
+             alt="博客">
+        
+        博客
+      </a>
+      <div class="devsite-footer-promo-description">阅读最新动态、客户案例和使用技巧。</div>
+    </li>
+    
+    <li class="devsite-footer-promo">
+      <a href="https://issuetracker.google.com/bookmark-groups/76561"
+         class="devsite-footer-promo-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+       
+         
+         data-label="Footer Promo Link (index 4)"
+       
+       >
+        
+        
+        <img class="devsite-footer-promo-icon"
+             src="/site-assets/developers_64dp.png"
+             loading="lazy"
+             alt="问题跟踪器">
+        
+        问题跟踪器
+      </a>
+      <div class="devsite-footer-promo-description">出错了？立即向我们发送错误报告！</div>
+    </li>
+    
+  </ul>
+</nav>
+
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent" aria-label="页脚链接">
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">了解详情</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/maps/faq"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+          
+            常见问题解答
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/maps/documentation/api-picker"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+          
+            API 选择器
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/maps/documentation/javascript/tutorials"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+          
+            教程
+          
+          </a>
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">平台</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/maps/apis-by-platform#android"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+          
+            Android
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/maps/apis-by-platform#ios"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+          
+            iOS
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/maps/apis-by-platform#web_apis"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+          
+            网络
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/maps/apis-by-platform#web_service_apis"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+          
+            网络服务
+          
+          </a>
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">产品信息</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/maps/pricing-and-plans"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+            data-category="pricingAndPlans"data-action="linkClick"data-label="footerMen">
+          
+            定价和方案
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://cloud.google.com/contact-maps/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+            data-label="footerMenu"data-category="contactSales"data-action="linkClick">
+          
+            联系销售人员
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.com/maps/support/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+          
+            支持
+          
+          </a>
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://cloud.google.com/maps-platform/terms"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+          
+            服务条款
+          
+          </a>
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent">
+  
+  
+  <nav class="devsite-footer-sites" aria-label="其他 Google Developers 网站">
+    <a href="https://developers.google.com/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <img class="devsite-footer-sites-logo"
+           src="https://www.gstatic.com/devrel-devsite/prod/vd7ff44c5bfb37fb3237a957a44096487cf6c040e737614b6a01efed4db62f3c8/developers/images/lockup-developers.svg"
+           loading="lazy"
+           alt="Google Developers">
+    </a>
+    <ul class="devsite-footer-sites-list">
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.android.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Android Link"
+         
+         >
+          Android
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Chrome Link"
+         
+         >
+          Chrome
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Firebase Link"
+         
+         >
+          Firebase
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google Cloud Platform Link"
+         
+         >
+          Google Cloud Platform
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="/products"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer All products Link"
+         
+         >
+          所有产品
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="实用程序链接">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/terms/site-terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          条款
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          隐私权政策
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 devsite-footer-utility-button">
+        
+        <span class="devsite-footer-utility-description">订阅 Google Developers 简报</span>
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//services.google.com/fb/forms/googledevelopersnewsletter/?utm_medium=referral&amp;utm_source=google-products&amp;utm_team=googledevs&amp;utm_campaign=201611-newsletter-launch"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Subscribe link"
+         >
+          订阅
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+    
+<devsite-language-selector>
+  <devsite-select class="devsite-language-selector-menu">
+    
+    <select aria-label="选择您的语言偏好设置。"
+            class="devsite-language-selector-select"
+            name="language"
+            track-name="click"
+            track-type="languageSelector">
+    
+      
+      <option>Language</option>
+    
+    
+      <option value="en"
+              lang="en"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="en"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        English
+      </option>
+    
+      <option value="id"
+              lang="id"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="id"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Bahasa Indonesia
+      </option>
+    
+      <option value="de"
+              lang="de"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="de"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Deutsch
+      </option>
+    
+      <option value="es"
+              lang="es"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español
+      </option>
+    
+      <option value="es_419"
+              lang="es_419"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="es_419"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Español – América Latina
+      </option>
+    
+      <option value="fr"
+              lang="fr"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="fr"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Français
+      </option>
+    
+      <option value="pt_br"
+              lang="pt_br"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="pt_br"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Português – Brasil
+      </option>
+    
+      <option value="ru"
+              lang="ru"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ru"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        Русский
+      </option>
+    
+      <option value="zh_cn"
+              lang="zh_cn"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_cn"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 简体
+      </option>
+    
+      <option value="zh_tw"
+              lang="zh_tw"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="zh_tw"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        中文 – 繁體
+      </option>
+    
+      <option value="ja"
+              lang="ja"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ja"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        日本語
+      </option>
+    
+      <option value="ko"
+              lang="ko"
+              track-metadata-original-language="zh_cn"
+              track-metadata-selected-language="ko"
+              track-name="changed"
+              track-type="languageSelector"
+            >
+        한국어
+      </option>
+    
+    </select>
+  </devsite-select>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel></devsite-panel>
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar 
+                  ></devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics enable-analytics-iframe>
+      
+        <script type="application/json" analytics>[{"gaid": "UA-24532603-1", "dimensions": {"dimension11": false, "dimension5": "zh-cn", "dimension3": false, "dimension1": "Signed out", "dimension6": "zh-cn", "dimension4": "Google Maps Platform"}, "metrics": {"ratings_count": "metric2", "ratings_value": "metric1"}}]</script>
+<script type="application/json" gtm>{"parameters": {"freeTrialEligibleUser": "False", "internalUser": "False", "language": {"machineTranslated": "False", "requested": "zh-cn", "served": "zh-cn"}, "pageType": "landing", "projectName": "Google Maps Platform", "signedIn": "False", "tenant": "developers", "recommendations": {"sourcePage": "", "sourceType": 0, "sourceRank": 0, "sourceIdenticalDescriptions": 0, "sourceTitleWords": 0, "sourceDescriptionWords": 0, "experiment": ""}}, "tags": ["GTM-5CVQBG"]}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    <script nonce="PZDSsMFRuXvlDwDkDiLI/2oEWehwjD">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/vd7ff44c5bfb37fb3237a957a44096487cf6c040e737614b6a01efed4db62f3c8/developers/js/app_loader.js', '[1,"zh_cn",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/vd7ff44c5bfb37fb3237a957a44096487cf6c040e737614b6a01efed4db62f3c8","https://www.gstatic.com/devrel-devsite/prod/vd7ff44c5bfb37fb3237a957a44096487cf6c040e737614b6a01efed4db62f3c8/developers","https://developers-dot-devsite-v2-prod.appspot.com",1,null,["/_pwa/developers/manifest.json","https://www.gstatic.com/devrel-devsite/prod/vd7ff44c5bfb37fb3237a957a44096487cf6c040e737614b6a01efed4db62f3c8/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/vd7ff44c5bfb37fb3237a957a44096487cf6c040e737614b6a01efed4db62f3c8/developers/images/favicon.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,40,50,63,70,75,76,80,87,88,91,92,93,97,98,100,101,102,103,104,105,107,108,111,112,113,115,116,117,118,120,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,138,147,148,149,151],"AIzaSyAP-jjEJBzmIyKR4F-3XITp8yM9T1gEEI8","AIzaSyB6xiKGDR5O3Ak2okS4rLkauxGUG7XP0hg"]')
+  
+</script>
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>

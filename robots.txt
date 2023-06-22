@@ -1,0 +1,9 @@
+User-agent: Googlebot
+Disallow:
+Sitemap: https://o2solutions.lk/sitemap.xml
+User-agent: AdsBot-Google
+Disallow:
+
+User-agent: *
+Disallow:
+Sitemap: https://o2solutions.lk/sitemap.xml
